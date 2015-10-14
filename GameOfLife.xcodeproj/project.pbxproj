@@ -14,7 +14,7 @@
 		064440891BC32D3A00B05BA1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 064440871BC32D3A00B05BA1 /* LaunchScreen.storyboard */; };
 		064440941BC32D3A00B05BA1 /* GameOfLifeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 064440931BC32D3A00B05BA1 /* GameOfLifeTests.swift */; };
 		0694FB301BC331F100C4CCD2 /* GameOfLife.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0694FB2F1BC331F100C4CCD2 /* GameOfLife.swift */; settings = {ASSET_TAGS = (); }; };
-		CB83401EAD0225D14DA28C77 /* Pods_GameOfLifeTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1B96B7E4BBE0D194DA4E48CA /* Pods_GameOfLifeTests.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		CB83401EAD0225D14DA28C77 /* Pods_GameOfLifeTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1B96B7E4BBE0D194DA4E48CA /* Pods_GameOfLifeTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
