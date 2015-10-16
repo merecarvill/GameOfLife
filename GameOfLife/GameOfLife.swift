@@ -49,8 +49,7 @@ public class World {
   }
 
   func newlivingLocations() -> [Location] {
-    let potentialLocations = livingLocations.map({ $0.neighbors })
-                                            .reduce([], combine: { $0 + $1 })
+    let potentialLocations = livingLocations.flatMap({ $0.neighbors })
 
     return filterByNumberOfOccurrences(potentialLocations, targetCount: 3)
   }
