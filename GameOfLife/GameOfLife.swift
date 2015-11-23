@@ -22,7 +22,7 @@ public class Location: Equatable, Hashable {
       (row, col - 1), (row, col + 1),
       (row + 1, col + 1), (row - 1, col - 1),
       (row + 1, col - 1), (row - 1, col + 1)
-    ].map({ Location(coordinates: $0) })
+      ].map({ Location(coordinates: $0) })
   }
 }
 
@@ -38,53 +38,23 @@ public class World {
   }
 
   public func advanceGeneration() -> World {
-    return World(livingLocations: persistingLocations() + newlivingLocations())
+    let potentiallyLivingLocations = self.livingLocations + livingLocations.flatMap({ $0.neighbors })
+    let nextLivingCells = potentiallyLivingLocations.filter { location in
+      if numberOfLiveNeighbors(location) == 2 {
+        return aliveAt(location)
+      } else {
+        return numberOfLiveNeighbors(location) == 3
+      }
+    }
+    return World(livingLocations: nextLivingCells)
   }
 
   public func aliveAt(location: Location) -> Bool {
-    for liveLocation in livingLocations {
-      if location == liveLocation { return true }
-    }
-    return false
+    return livingLocations.contains(location)
   }
 
-  func newlivingLocations() -> [Location] {
-    let potentialLocations = livingLocations.flatMap({ $0.neighbors })
-
-    return filterByNumberOfOccurrences(potentialLocations, targetCount: 3)
-  }
-
-  func filterByNumberOfOccurrences(locations: [Location], targetCount: Int) -> [Location] {
-    let locationCounts = countLocationOccurrences(locations)
-
-    return locationCounts.filter({ (_, count) in count == targetCount })
-                         .map({ (location, _) in location })
-  }
-
-  func countLocationOccurrences(locations: [Location]) -> [Location: Int] {
-    var locationCounts = [Location: Int]()
-
-    for location in locations {
-      let count = locationCounts[location] ?? 0
-      locationCounts[location] = count + 1
-    }
-
-    return locationCounts
-  }
-
-  func persistingLocations() -> [Location] {
-    return livingLocations.filter({ notUnderpopulated($0) && notOverpopulated($0) })
-  }
-
-  func notUnderpopulated(location: Location) -> Bool {
-    return numberOfLiveNeighbors(location) >= 2
-  }
-
-  func notOverpopulated(location: Location) -> Bool {
-    return numberOfLiveNeighbors(location) <= 3
-  }
-
-  func numberOfLiveNeighbors(location: Location) -> Int {
+  private func numberOfLiveNeighbors(location: Location) -> Int {
     return location.neighbors.filter({ aliveAt($0) }).count
   }
+
 }
