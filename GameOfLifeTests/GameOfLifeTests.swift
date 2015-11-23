@@ -73,7 +73,9 @@ class WorldTests: QuickSpec {
 
       it("returns a world in which a live cell with less than 2 live neighbors is now dead") {
         let targetLocation = Location(coordinates: (1, 1))
-        let neighbors = [Location(coordinates: (0, 0))]
+        let neighbors = [
+          Location(coordinates: (0, 0))
+        ]
         let noNeighborsWorld = World(livingLocations: [targetLocation])
         let oneNeighborWorld = World(livingLocations: [targetLocation] + neighbors)
 
@@ -117,7 +119,18 @@ class WorldTests: QuickSpec {
         expect(fourNeighborsWorld.advanceGeneration().aliveAt(targetLocation)).to(beFalse())
       }
 
-      it("returns a world in which locations with exactly 3 live neighbors now have a live cell") {
+      it("returns a world in which a dead cell with fewer than 3 live neighbors is still dead") {
+        let targetLocation = Location(coordinates: (1, 1))
+        let neighbors = [
+          Location(coordinates: (0, 0)),
+          Location(coordinates: (0, 2))
+        ]
+        let world = World(livingLocations: neighbors)
+
+        expect(world.advanceGeneration().aliveAt(targetLocation)).to(beFalse())
+      }
+
+      it("returns a world in which a dead cell with exactly 3 live neighbors is now alive") {
         let targetLocation = Location(coordinates: (1, 1))
         let neighbors = [
           Location(coordinates: (0, 0)),
@@ -127,6 +140,19 @@ class WorldTests: QuickSpec {
         let world = World(livingLocations: neighbors)
 
         expect(world.advanceGeneration().aliveAt(targetLocation)).to(beTrue())
+      }
+
+      it("returns a world in which a dead cell with more than 3 live neighbors is still dead") {
+        let targetLocation = Location(coordinates: (1, 1))
+        let neighbors = [
+          Location(coordinates: (0, 0)),
+          Location(coordinates: (0, 2)),
+          Location(coordinates: (2, 2)),
+          Location(coordinates: (2, 0))
+        ]
+        let world = World(livingLocations: neighbors)
+
+        expect(world.advanceGeneration().aliveAt(targetLocation)).to(beFalse())
       }
     }
   }
