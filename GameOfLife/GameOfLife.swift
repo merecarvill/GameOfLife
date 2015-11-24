@@ -38,7 +38,7 @@ public class World {
   }
 
   public func advanceGeneration() -> World {
-    let potentiallyLivingLocations = self.livingLocations + livingLocations.flatMap({ $0.neighbors })
+    let potentiallyLivingLocations = livingLocations.flatMap({ $0.neighbors })
     let nextLivingCells = potentiallyLivingLocations.filter { location in
       if numberOfLiveNeighbors(location) == 2 {
         return aliveAt(location)
