@@ -7,14 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		062B1B231C1B25A3003A7E2D /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 062B1B221C1B25A3003A7E2D /* Location.swift */; };
+		062B1B251C1B2B6F003A7E2D /* LocationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 062B1B241C1B2B6E003A7E2D /* LocationTests.swift */; };
 		0644407F1BC32D3A00B05BA1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0644407E1BC32D3A00B05BA1 /* AppDelegate.swift */; };
 		064440811BC32D3A00B05BA1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 064440801BC32D3A00B05BA1 /* ViewController.swift */; };
 		064440841BC32D3A00B05BA1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 064440821BC32D3A00B05BA1 /* Main.storyboard */; };
 		064440861BC32D3A00B05BA1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 064440851BC32D3A00B05BA1 /* Assets.xcassets */; };
 		064440891BC32D3A00B05BA1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 064440871BC32D3A00B05BA1 /* LaunchScreen.storyboard */; };
-		064440941BC32D3A00B05BA1 /* GameOfLifeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 064440931BC32D3A00B05BA1 /* GameOfLifeTests.swift */; };
-		0694FB301BC331F100C4CCD2 /* GameOfLife.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0694FB2F1BC331F100C4CCD2 /* GameOfLife.swift */; settings = {ASSET_TAGS = (); }; };
-		CB83401EAD0225D14DA28C77 /* Pods_GameOfLifeTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1B96B7E4BBE0D194DA4E48CA /* Pods_GameOfLifeTests.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		064440941BC32D3A00B05BA1 /* WorldTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 064440931BC32D3A00B05BA1 /* WorldTests.swift */; };
+		0694FB301BC331F100C4CCD2 /* World.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0694FB2F1BC331F100C4CCD2 /* World.swift */; };
+		CB83401EAD0225D14DA28C77 /* Pods_GameOfLifeTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1B96B7E4BBE0D194DA4E48CA /* Pods_GameOfLifeTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -28,6 +30,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		062B1B221C1B25A3003A7E2D /* Location.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
+		062B1B241C1B2B6E003A7E2D /* LocationTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationTests.swift; sourceTree = "<group>"; };
 		0644407B1BC32D3A00B05BA1 /* GameOfLife.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GameOfLife.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0644407E1BC32D3A00B05BA1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		064440801BC32D3A00B05BA1 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -36,9 +40,9 @@
 		064440881BC32D3A00B05BA1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0644408A1BC32D3A00B05BA1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0644408F1BC32D3A00B05BA1 /* GameOfLifeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GameOfLifeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		064440931BC32D3A00B05BA1 /* GameOfLifeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameOfLifeTests.swift; sourceTree = "<group>"; };
+		064440931BC32D3A00B05BA1 /* WorldTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorldTests.swift; sourceTree = "<group>"; };
 		064440951BC32D3A00B05BA1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		0694FB2F1BC331F100C4CCD2 /* GameOfLife.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameOfLife.swift; sourceTree = "<group>"; };
+		0694FB2F1BC331F100C4CCD2 /* World.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = World.swift; sourceTree = "<group>"; };
 		18EC678DB761CE89FAB4E184 /* Pods-GameOfLifeTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GameOfLifeTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GameOfLifeTests/Pods-GameOfLifeTests.debug.xcconfig"; sourceTree = "<group>"; };
 		1B96B7E4BBE0D194DA4E48CA /* Pods_GameOfLifeTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GameOfLifeTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		20D06A1FD66AF3DE38288F11 /* Pods-GameOfLifeTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GameOfLifeTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-GameOfLifeTests/Pods-GameOfLifeTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -92,7 +96,8 @@
 				064440851BC32D3A00B05BA1 /* Assets.xcassets */,
 				064440871BC32D3A00B05BA1 /* LaunchScreen.storyboard */,
 				0644408A1BC32D3A00B05BA1 /* Info.plist */,
-				0694FB2F1BC331F100C4CCD2 /* GameOfLife.swift */,
+				0694FB2F1BC331F100C4CCD2 /* World.swift */,
+				062B1B221C1B25A3003A7E2D /* Location.swift */,
 			);
 			path = GameOfLife;
 			sourceTree = "<group>";
@@ -100,8 +105,9 @@
 		064440921BC32D3A00B05BA1 /* GameOfLifeTests */ = {
 			isa = PBXGroup;
 			children = (
-				064440931BC32D3A00B05BA1 /* GameOfLifeTests.swift */,
+				064440931BC32D3A00B05BA1 /* WorldTests.swift */,
 				064440951BC32D3A00B05BA1 /* Info.plist */,
+				062B1B241C1B2B6E003A7E2D /* LocationTests.swift */,
 			);
 			path = GameOfLifeTests;
 			sourceTree = "<group>";
@@ -275,7 +281,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				064440811BC32D3A00B05BA1 /* ViewController.swift in Sources */,
-				0694FB301BC331F100C4CCD2 /* GameOfLife.swift in Sources */,
+				0694FB301BC331F100C4CCD2 /* World.swift in Sources */,
+				062B1B231C1B25A3003A7E2D /* Location.swift in Sources */,
 				0644407F1BC32D3A00B05BA1 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -284,7 +291,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				064440941BC32D3A00B05BA1 /* GameOfLifeTests.swift in Sources */,
+				062B1B251C1B2B6F003A7E2D /* LocationTests.swift in Sources */,
+				064440941BC32D3A00B05BA1 /* WorldTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
